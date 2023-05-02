@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background: var(--backdeep1);
 }
 
 .wrapper {
@@ -27,12 +27,12 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--textcolor);
 }
 
 .card {
   background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
+  border-radius: 15px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
   color: hsl(206, 17%, 28%);
@@ -177,6 +177,8 @@ button[disabled] {
 :root {
   --bradius: 30px;
   --bad: linear-gradient(90deg, red 0%, darkred 100%);
+  --textcolor: white;
+  --backdeep1: linear-gradient(90deg, rgba(0,51,61,1) 0%, rgba(33,5,53,1) 20%, rgba(33,5,53,1) 81%, rgba(0,51,61,1) 100%);
   --deep1:  #210535;
   --deep2:  #430d4b;
   --deep3: #7b337d;
