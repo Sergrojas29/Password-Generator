@@ -177,6 +177,11 @@ button[disabled] {
 :root {
   --bradius: 30px;
   --bad: linear-gradient(90deg, red 0%, darkred 100%);
+  --deep1:  #210535;
+  --deep2:  #430d4b;
+  --deep3: #7b337d;
+  --deep4: #c874b2;
+  --deep5: #f5d5e0;
 }
 
 .tooltipcontainer {
