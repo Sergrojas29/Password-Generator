@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bradius: 30px;
+    --bad: linear-gradient(90deg, red 0%, darkred 100%);
+}
+
+.tooltipcontainer {
+    /* visibility: hidden; */
+    position: absolute;
+    padding: 1%;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.267) 0px 15px 15px 0px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+h3 {
+    text-align: center;
+}
+
+section ul li span {
+    margin-right: 5px;
+}
+
+section ul li {
+    list-style: none;
+    margin: 10px 0;
+    background-color: hsl(0, 0%, 97%);
+    padding: 5px;
+    text-align: center;
+    border-radius: var(--bradius);
+    border: 1px solid rgba(0, 0, 0, 0.123);
+}
+
+#bad {
+    box-shadow: 1px 1px 10px 1px rgba(139, 0, 0, 0.432);
+}
+
+#good {
+    box-shadow: 1px 1px 10px 1px rgba(224, 224, 63, 0.644);
+}
+
+#better {
+    box-shadow: 1px 1px 10px 1px rgba(255, 68, 0, 0.527);
+}
+
+#best {
+    box-shadow: 1px 1px 10px 1px rgba(0, 100, 0, 0.603);
+}
+
+.tooltipcontainer:hover {
+    visibility: visible;
+}

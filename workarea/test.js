@@ -113,37 +113,73 @@ function generateSecurePassword(Length) {
 var slider = document.getElementById('Security')
 var output = document.getElementById('passwordLevel')
 
-slider.oninput = function  () {
+var o = output.textContent;
+console.log(o)
+
+slider.oninput = function () {
     output.innerHTML = slider.value;
     size = slider.value
     return size;
 }
 
-
 var sizeSlider = document.getElementById('passSize')
 var sizeOutput = document.getElementById('passwordsize')
+var passwordText = document.querySelector("#password")
 sizeSlider.oninput = function () {
     sizeOutput.innerHTML = sizeSlider.value;
     size = sizeSlider.value;
     return size;
 }
 
+function genPassword() {
+    level = output.textContent;
+    pwLenght = sizeOutput.textContent;
 
-function newgeneratePassword(){
-    output = document.getElementById('passwordLevel')   
-    if (output === 1) {
-        generateBadPassword(10);
+    if (level == 0) {
+        var password = "Error Please enter Secure level"
+        passwordText.setAttribute("style", "color:red")
+    }
+    else if (level == 1){
+        var password = generateBadPassword(pwLenght);
+        passwordText.setAttribute("style", "color:grey")
+    }
+    else if(level == 2){
+        var password = generatePassword(pwLenght);
+        passwordText.setAttribute("style", "color:grey")
+
+    }
+    else if (level == 3) {
+        var password = generateSemiSecurePassword(pwLenght)
+        passwordText.setAttribute("style", "color:grey")
         
     }
-
+    else if (level == 4) {
+        var password = generateSecurePassword(pwLenght)
+        passwordText.setAttribute("style", "color:grey")
+        
+    }
+    return password;
+    
 }
 
 
 
-console.log(generateBadPassword(24))
-console.log(generatePassword(24))
-console.log(generateSemiSecurePassword(24))
-console.log(generateSecurePassword(24))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -158,10 +194,8 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = newgeneratePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+    var passwordText = document.querySelector("#password");
+    passwordText.textContent = genPassword();
 
 }
 

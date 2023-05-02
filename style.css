@@ -42,6 +42,61 @@ header {
   padding: 30px 40px;
   text-align: center;
 }
+p{
+    line-height: 0;
+    margin: 0 0;
+    max-width: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+.span{
+}
+
+
+
+.sliderContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+.side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.slider{
+    -webkit-appearance: none;
+    margin: auto 0;
+    margin-left: 10px;
+    height: 20px;
+    outline: none;
+    opacity: .7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 15px;
+    box-shadow: 0 1px 10px 1px gray;
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.466) 0%, rgba(0, 128, 0, 0.356) 100%);
+    
+    
+}
+#amount{
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 30px;
+    background-color:white;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+
 
 .card-header::after {
   content: " ";
@@ -117,6 +172,72 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+}
+
+:root {
+  --bradius: 30px;
+  --bad: linear-gradient(90deg, red 0%, darkred 100%);
+}
+
+.tooltipcontainer {
+  visibility: hidden;
+  position: absolute;
+  top: 300px;
+  padding: 1%;
+  width: 700px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.267) 0px 15px 15px 0px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+a {
+  padding: 1px;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px 1px rgb(207, 207, 207);
+}
+
+section ul li span {
+  margin-right: 5px;
+}
+
+section ul li {
+  list-style: none;
+  margin: 10px 0;
+  background-color: hsl(0, 0%, 100%);
+  padding: 5px;
+  text-align: center;
+  border-radius: var(--bradius);
+  border: 1px solid rgba(0, 0, 0, 0.123);
+}
+
+#bad {
+  box-shadow: 1px 1px 10px 1px rgba(139, 0, 0, 0.432);
+}
+
+#good {
+  box-shadow: 1px 1px 10px 1px rgba(224, 224, 63, 0.644);
+}
+
+#better {
+  box-shadow: 1px 1px 10px 1px rgba(255, 68, 0, 0.527);
+}
+
+#best {
+  box-shadow: 1px 1px 10px 1px rgba(0, 100, 0, 0.603);
+}
+a:hover{
+  transition: 2s;
+  box-shadow: inset 0 0 5px gray;
+  border-radius: 15px;
+
+}
+a:hover + .tooltipcontainer {
+  transition: 3s;
+  visibility: visible;
+  cursor: pointer;
 }
 
 @media (max-width: 690px) {
