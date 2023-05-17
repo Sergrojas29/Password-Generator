@@ -1,5 +1,5 @@
 # MiniProject3
-Url: https://sergrojas29.github.io/MiniProject3/
+Url: https://sergrojas29.github.io/Password-Generator/
 
 # table of content
 
